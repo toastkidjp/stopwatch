@@ -82,8 +82,8 @@ public class Stopwatch extends Button {
      */
     private String makeText(final Duration duration) {
         return String.format("%02d:%02d",
-                (long) Math.floor(duration.toMinutes() % 60.0),
-                (long) Math.floor(duration.toSeconds() % 60.0)
+                (long) (duration.toMinutes() % 60.0),
+                (long) (duration.toSeconds() % 60.0)
                 )
                 + (active ? "▶" : "■");
     }
